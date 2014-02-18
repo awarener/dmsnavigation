@@ -39,6 +39,26 @@ public slots:
 void setCurrentIndex(int index);
 ```
 
+Usage
+----
+Using the widget is pretty simple. This is the example of the GIF you see above.
+
+```cpp
+int main(int argc, char** argv)
+{
+   QApplication app(argc, argv);
+
+   DMSNavigation navi;
+   navi.resize(600, 50);
+   navi.show();
+
+   navi.addTab(new QTextEdit("The first."), "Text 1");
+   navi.addTab(new QTextEdit("The second."), "Text 2");
+   navi.addTab(new QTextEdit("The third."), "Text 3");
+
+   return app.exec();
+}
+```
 
 Version
 ----
